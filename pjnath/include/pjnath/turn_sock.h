@@ -237,6 +237,7 @@ typedef struct pj_turn_sock_tls_cfg
      * - timeout
      * - sockopt_params
      * - sockopt_ignore_error
+     * - enable_renegotiation
      */
     pj_ssl_sock_param ssock_param;
 
@@ -354,8 +355,8 @@ typedef struct pj_turn_sock_cfg
     unsigned so_sndbuf_size;
 
     /**
-     * This specifies TLS settings for TLS transport. It is only be used
-     * when this TLS is used to connect to the TURN server.
+     * This specifies TLS settings for TLS transport. It's only applicable when
+     * TLS is used to connect to the TURN server.
      */
     pj_turn_sock_tls_cfg tls_cfg;
 
